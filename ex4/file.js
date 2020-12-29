@@ -5,7 +5,7 @@
 
 var fs = require('fs');
 
-var data = fs.readFile('./package-lock.json', 'utf-8', function (err, data) { //비동기식, 파읽 다 읽기전에 콘솔로그 실행
+fs.readFile('./package-lock.json', 'utf-8', function (err, data) { //비동기식, 파읽 다 읽기전에 콘솔로그 실행
     console.log(data);
 });
 
