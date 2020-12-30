@@ -14,7 +14,10 @@ server.on('connection', function (socket) {
 
 server.on('request', function (req, res) {
     console.log('클라이언트 요청이 들어옴');
-    console.dir(req);
+    res.writeHead(200, {
+        "Content-Type": "text/html; charset=utf-8"
+    });
+    res.write("");
 });
 
 server.on('close', function () {
